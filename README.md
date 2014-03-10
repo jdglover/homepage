@@ -1,6 +1,6 @@
 Flaskapp homepage
 =========
-Written in Python 2.76. using Flask 0.10. 
+Written in Python 2.7.6 using Flask 0.10. 
 
 This page is a simple Flask app. The vast majority of the page is static, but 
 there is a working contact form on the email page.  Simply open the routes.py
