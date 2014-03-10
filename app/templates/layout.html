@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Justin Glover | Linguist</title>
+	<!--Website by Justin Glover.  Made with the flatly bootswatch by Jenil Gogari http://www.jgog.in and Thomas Park http://thomaspark.me/-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="google-site-verification" content="GyOF2xS322zKy9FqH-Gus6-WIOgcsKPWLAu_--iVmNc" />
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootswatch.css') }}">    
+	
+	  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}"><!-- Major Browsers -->
+    <!--[if IE]><link rel="SHORTCUT ICON" href="{{ url_for('static', filename='img/favicon.ico') }}"/><![endif]--><!-- Internet Explorer-->
+
+	  <script type="text/javascript">
+
+	   var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-23019901-1']);
+		  _gaq.push(['_setDomainName', "bootswatch.com"]);
+  		  _gaq.push(['_setAllowLinker', true]);
+		  _gaq.push(['_trackPageview']);
+
+	   (function() {
+	     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	   })();
+	  </script>
+  </head>
+
+  <body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
+
+  <div class="container">
+
+
+<!-- Navbar
+================================================== -->
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>       
+        <div class="nav-collapse collapse" id="main-menu">
+        <ul class="nav" id="main-menu-left">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('expertise') }}">Expertise</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Experience <b class="caret"></b></a>
+            <ul class="dropdown-menu" id="swatch-menu">              
+              <li><a href="{{ url_for('resume') }}">Resume</a></li>
+              <li><a href="{{ url_for('cv') }}">CV</a></li>              
+            </ul>
+          </li>
+          <li><a href="{{ url_for('code') }}">Code</a></li>
+          <li><a href="{{ url_for('research') }}">Research</a></li>
+          <li class="dropdown" id="preview-menu">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ url_for('email') }}">Email</a></li>
+              <li><a href="http://www.linkedin.com/pub/justin-glover/70/5b9/78">LinkedIn</a></li>
+              <li><a href="https://github.com/jdglover">GitHub</a></li>
+            </ul>
+          </li>          
+        </ul>        
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Masthead
+================================================== -->
+  <header class="jumbotron subhead" id="hometitle">
+    <div class="row">
+      <div class="span6">
+        <h1>Justin Glover</h1>
+        <p class="lead">Linguist</p>      
+      </div>    
+    </div>  
+  </header>
+
+
+<!-- Typography
+================================================== -->
+  <section id="maininfo">
+    <div class="row">
+      <div class="span11">
+        {% block content %}
+        {% endblock %}
+      </div>  
+    </div>    
+  </section>
+
+
+<!-- Footer
+================================================== -->
+  <hr>
+  <footer id="footer">
+    <p class="pull-right"><a href="#top">Back to top</a></p>        
+    <p>Website by Justin Glover.  &copy;Copyright 2014.  All rights reserved.  <a href="http://flask.pocoo.org/"><img
+    src="http://flask.pocoo.org/static/badges/powered-by-flask-s.png"
+    border="0"
+    alt="powered by Flask"
+    title="powered by Flask"></a></p>    
+  </footer>
+  
+  </div><!-- /container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='js/jquery.smooth-scroll.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootswatch.js') }}"></script>
+  
+<!-- Google Analytics script
+================================================== -->  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43182028-1', 'justinglover.net');
+  ga('send', 'pageview');
+  </script>
+
+  </body>
+
+</html>

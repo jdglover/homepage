@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Email me</h3>
+
+	{% if success %}
+    <p>Thank you for your message. I'll get back to you shortly.</p>
+
+    {% else %}
+
+        <p>I am always happy to talk linguistics and to work on new projects.
+	    If you would like to contact me, please use the form below to send an email.</p>
+	    <p>You can obtain my email address by <a href="http://www.google.com/recaptcha/mailhide/d?k=01gfgGKLMt0kP4Lpmd31Oo0g==&amp;c=rDm1gXlE-Y_oxFFdfZz_b9l0dOTQxb6AKqLAsPi0VVI=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501gfgGKLMt0kP4Lpmd31Oo0g\75\75\46c\75rDm1gXlE-Y_oxFFdfZz_b9l0dOTQxb6AKqLAsPi0VVI\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">clicking here</a>.</p>
+
+        {% for message in form.name.errors %}            
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.email.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.subject.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.message.errors %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        <form class="form-horizontal well" action="{{ url_for('email') }}" method=post>
+            <fieldset>
+                <div class="control-group">
+                    {{ form.hidden_tag() }}        
+                    <label class="control-label" for="name">
+                        {{ form.name.label }}
+                    </label>  
+                    <div class="controls">          
+                        {{ form.name }}
+                    </div>
+                </div>    
+            
+                <div class="control-group">                    
+                    <label class="control-label" for="email">            
+                        {{ form.email.label }}
+                    </label>
+                    <div class="controls">
+                        {{ form.email }}
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="subject">
+                        {{ form.subject.label }}
+                    </label>
+                    <div class="controls">
+                        {{ form.subject }}
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="message">
+                        {{ form.message.label }}
+                    </label>
+                    <div class="controls">
+                        {{ form.message }}
+                    </div>
+                </div>
+
+                <div class="form-actions">                   
+                        {{ form.submit }}                    
+                </div>
+        </form>
+
+    {% endif %}	 
+        
+{% endblock %}

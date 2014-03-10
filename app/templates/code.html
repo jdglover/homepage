@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Code Samples</h3>
+  <p>Below you will find descriptions of some small programs that I have recently written.  All of the source code is available
+    on my <a href="https://github.com/jdglover">GitHub</a> page.  Feel free to view, download, or modify any of these programs.  Let me know if you make any improvements!</p>    
+    <table class="table table-bordered table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Program</th>
+          <th>Description</th>            
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>This webpage</td>
+          <td>I am currently in the process of finishing up a version of this webpage that is 
+          powered by the Flask microdevelopment framework for Python. The contact form is the obvious change on the surface. Check it out and let me know if you have any
+          suggestions.  Thanks to <a href="http://www.jgog.in">Jenil Gogari</a> and <a href="http://thomaspark.me/">Thomas Park</a> for the awesome bootswatch!</td>
+        </tr>
+        <tr>
+          <td>UDHR language ID</td>
+          <td>This program is inspired by chapter 3, exercise 43 of the NLTK book. The program checks an input text file (UTF-8 encoding) against the UDHR corpus for English, French, German, Italian, Portuguese, and Spanish. The program ranks the liklihood that the input text is a match for one of these languages and returns the most likely language match.</td>
+        </tr>
+        <tr>
+          <td>Reference checker</td>
+          <td>This is a reference checker that I created to help ensure that all of the in-text citations in my dissertation also appear on the references page and vice-versa.It uses regular expressions to search for the relevant information. In order to use the reference checker, you will need two plain text files. The first file is the actual paper, article, dissertation, etc. and the second file is the references page.</td>
+        </tr>
+        <tr>          
+          <td>Flashcards</td>
+          <td>This flash card program takes the basic idea of practicing vocabulary (or anything, really) with flashcards, and adds a dynamic component. There are five interactive boxes and all of your words begin in the first box. As you practice words and get them correct, they automatically move from the current box to the next box. All words that you have successfully learned (i.e., gotten correct five consecutive times) are collected in the sixth box, where they can't be practiced anymore. If you ever make a mistake with a given word, it is sent back to the first box and it must be practiced again.</td>
+        </tr>
+        <tr>
+          <td>Tic-tac-toe</td>
+          <td>This is a simple tic-tac-toe game I created over while taking a break from dissertation writing. The function that checks for winners works, but it's ugly and
+          needs to be refined. The AI could also be beefed up.</td>
+        </tr>        
+      </tbody>
+    </table>
+{% endblock %}
